@@ -40,7 +40,7 @@ app.put('/portfolio/:projectId', async (request, response) => {
   response.json(updatedProject)
 })
 
-const PORT = process.env.PORT || 5500
+const PORT = process.env.PORT || 3004
 app.listen(PORT, () => {
   console.log(`The express app is ready on port ${PORT}!`)
 })
