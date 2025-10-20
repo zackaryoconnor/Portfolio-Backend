@@ -4,7 +4,11 @@ const app = express()
 const mongoose = require('mongoose')
 const Project = require('./projects.js')
 const cors = require('cors')
-app.use(cors())
+app.use(cors({ 
+  origin: '*', 
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization']
+}))
 
 mongoose.connect(process.env.MONGODB_URI)
 
